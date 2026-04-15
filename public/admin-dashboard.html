@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard | MessageFlow</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="admin-body">
+    <div class="admin-shell">
+      <header class="admin-header">
+        <div>
+          <p class="eyebrow">Admin Dashboard</p>
+          <h2 id="adminGreeting">MessageFlow Control Center</h2>
+        </div>
+        <button id="adminLogoutBtn" class="nav-button admin-logout" type="button">Logout</button>
+      </header>
+
+      <main class="admin-main">
+        <section class="admin-grid">
+          <article class="admin-metric-card">
+            <p class="dashboard-label">Total Users</p>
+            <h3 id="metricUsers">0</h3>
+          </article>
+          <article class="admin-metric-card">
+            <p class="dashboard-label">Wallet Credits</p>
+            <h3 id="metricCredits">INR 0</h3>
+          </article>
+          <article class="admin-metric-card">
+            <p class="dashboard-label">Message Revenue</p>
+            <h3 id="metricRevenue">INR 0</h3>
+          </article>
+          <article class="admin-metric-card">
+            <p class="dashboard-label">Provider Cost</p>
+            <h3 id="metricProviderCost">INR 0</h3>
+          </article>
+          <article class="admin-metric-card">
+            <p class="dashboard-label">Gross Profit</p>
+            <h3 id="metricProfit">INR 0</h3>
+          </article>
+          <article class="admin-metric-card">
+            <p class="dashboard-label">Message Jobs</p>
+            <h3 id="metricJobs">0</h3>
+          </article>
+        </section>
+
+        <div id="adminStatus" class="status-box" aria-live="polite"></div>
+
+        <section class="history-section admin-history-section">
+          <div class="history-block admin-history-block">
+            <div class="history-header">
+              <p class="dashboard-label">Recent Payments</p>
+              <h3>Wallet top-ups</h3>
+            </div>
+            <div id="adminPaymentsList" class="history-list"></div>
+          </div>
+
+          <div class="history-block admin-history-block">
+            <div class="history-header">
+              <p class="dashboard-label">Recent Messages</p>
+              <h3>Message jobs</h3>
+            </div>
+            <div id="adminMessagesList" class="history-list"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="/admin-dashboard.js"></script>
+  </body>
+</html>
