@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuickSend | Onboarding</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="onboarding-body">
+    <main class="onboarding-screen">
+      <section class="onboarding-card" aria-label="QuickSend onboarding">
+        <div class="onboarding-progress">
+          <span id="onboardingStepText" class="onboarding-step-text">Step 1 of 4</span>
+          <div id="onboardingDots" class="onboarding-dots" aria-label="Onboarding progress">
+            <span class="onboarding-dot is-active"></span>
+            <span class="onboarding-dot"></span>
+            <span class="onboarding-dot"></span>
+            <span class="onboarding-dot"></span>
+          </div>
+        </div>
+
+        <div class="onboarding-content">
+          <div id="onboardingArt" class="onboarding-art onboarding-art-bulk" aria-hidden="true">
+            <div class="art-bulk-wrap">
+              <div class="art-phone art-phone-left">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="art-phone art-phone-right">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="art-core-message">
+                <strong>SEND</strong>
+                <span></span>
+                <span class="short"></span>
+              </div>
+            </div>
+
+            <div class="art-mask-wrap">
+              <div class="art-mask-card"></div>
+              <div class="art-mask-badge">B</div>
+              <div class="art-mask-line one"></div>
+              <div class="art-mask-line two"></div>
+            </div>
+
+            <div class="art-whatsapp-wrap">
+              <div class="art-whatsapp-card"></div>
+              <div class="art-whatsapp-badge">WA</div>
+              <div class="art-whatsapp-line one"></div>
+              <div class="art-whatsapp-line two"></div>
+            </div>
+
+            <div class="art-email-wrap">
+              <div class="art-email-card"></div>
+              <div class="art-email-envelope"></div>
+              <div class="art-email-line one"></div>
+              <div class="art-email-line two"></div>
+            </div>
+          </div>
+
+          <div class="onboarding-copy">
+            <h1 id="onboardingTitle">Bulk Messaging Services</h1>
+            <p id="onboardingDescription">
+              Send messages to multiple users instantly and grow your business.
+            </p>
+          </div>
+        </div>
+
+        <div class="onboarding-actions">
+          <button id="onboardingPrevBtn" class="onboarding-button onboarding-button-secondary" type="button">
+            Previous
+          </button>
+          <button id="onboardingNextBtn" class="onboarding-button onboarding-button-primary" type="button">
+            Next
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <script src="/onboarding.js"></script>
+  </body>
+</html>

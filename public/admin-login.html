@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuickSend | Admin Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="admin-body">
+    <main class="admin-page">
+      <section class="admin-card">
+        <h1>Admin Login</h1>
+        <form id="adminLoginForm" class="admin-form" novalidate>
+          <label class="admin-input">
+            <input id="adminEmailInput" type="email" placeholder="Admin Email" autocomplete="email" required />
+          </label>
+          <label class="admin-input">
+            <input id="adminPasswordInput" type="password" placeholder="Admin Password" autocomplete="current-password" required />
+          </label>
+          <div id="adminLoginStatus" class="admin-status" aria-live="polite"></div>
+          <button class="admin-submit" type="submit">Open Admin</button>
+        </form>
+      </section>
+    </main>
+    <script src="/admin-login.js"></script>
+  </body>
+</html>

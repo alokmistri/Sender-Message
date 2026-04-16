@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuickSend | Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="service-body">
+    <main class="service-page">
+      <section class="service-shell">
+        <header class="service-head">
+          <p>QuickSend Services</p>
+          <h1>Select Service</h1>
+        </header>
+
+        <section id="serviceAdCard" class="service-ad-card is-hidden">
+          <img id="serviceAdImage" class="service-ad-image" alt="Service ad" />
+          <div class="service-ad-copy">
+            <p id="serviceAdText"></p>
+            <a id="serviceAdLink" class="service-ad-link" href="#" target="_blank" rel="noreferrer">Open</a>
+          </div>
+        </section>
+
+        <section class="service-grid">
+          <a class="service-card is-primary" href="/sms-page.html">
+            <span class="service-icon">SMS</span>
+            <strong>Message Sending</strong>
+            <p>Send bulk SMS fast.</p>
+          </a>
+          <a class="service-card" href="/masking-page.html">
+            <span class="service-icon">TAG</span>
+            <strong>Masking Message</strong>
+            <p>Send branded SMS using sender name.</p>
+          </a>
+          <a class="service-card" href="/email-page.html">
+            <span class="service-icon">MAIL</span>
+            <strong>Email Message</strong>
+            <p>Send bulk email campaigns.</p>
+          </a>
+          <a class="service-card" href="/whatsapp-page.html">
+            <span class="service-icon">WA</span>
+            <strong>WhatsApp Message</strong>
+            <p>Send media and links on WhatsApp.</p>
+          </a>
+        </section>
+      </section>
+    </main>
+    <script src="/topnav.js"></script>
+    <script src="/service-page.js"></script>
+  </body>
+</html>

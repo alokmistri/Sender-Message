@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuickSend | Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="dashboard-body">
+    <main class="dashboard-page">
+      <section class="dashboard-shell">
+        <header class="dashboard-profile-card">
+          <label class="dashboard-avatar-wrap" for="profileImageInput">
+            <img id="dashboardAvatar" class="dashboard-avatar" src="/quicksend-logo.svg" alt="Profile" />
+            <span class="dashboard-avatar-edit">Edit</span>
+          </label>
+          <input id="profileImageInput" class="dashboard-file-input" type="file" accept=".png,.jpg,.jpeg,.webp" />
+
+          <div class="dashboard-profile-copy">
+            <h1 id="dashboardName">QuickSend User</h1>
+            <p id="dashboardContact">+91 -----------</p>
+            <p id="dashboardEmail">email@example.com</p>
+          </div>
+        </header>
+
+        <section class="dashboard-grid">
+          <button id="walletCard" class="dashboard-mini-card dashboard-wallet-card" type="button">
+            <span class="dashboard-mini-label">Wallet Balance</span>
+            <strong id="dashboardWallet">INR 0</strong>
+          </button>
+
+          <button id="editDetailsButton" class="dashboard-mini-card dashboard-edit-card" type="button">
+            <span class="dashboard-mini-label">Profile Details</span>
+            <strong>Edit Details</strong>
+          </button>
+        </section>
+
+        <section id="dashboardAdCard" class="dashboard-ad-card is-hidden">
+          <img id="dashboardAdImage" class="dashboard-ad-image" alt="Advertisement" />
+          <div class="dashboard-ad-copy">
+            <p id="dashboardAdText"></p>
+            <a id="dashboardAdLink" class="dashboard-ad-link" href="#" target="_blank" rel="noreferrer">Open</a>
+          </div>
+        </section>
+
+        <section class="dashboard-user-meta">
+          <div>
+            <span class="dashboard-meta-label">Business</span>
+            <strong id="dashboardBusinessName">Not set</strong>
+          </div>
+          <div>
+            <span class="dashboard-meta-label">Type</span>
+            <strong id="dashboardBusinessType">Not set</strong>
+          </div>
+          <div>
+            <span class="dashboard-meta-label">DOB</span>
+            <strong id="dashboardDob">Not set</strong>
+          </div>
+        </section>
+
+        <button id="selectServiceButton" class="dashboard-service-button" type="button">Select Service</button>
+
+        <div id="dashboardStatus" class="dashboard-status" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <div id="dashboardEditModal" class="dashboard-modal is-hidden" role="dialog" aria-modal="true" aria-labelledby="editProfileTitle">
+      <div class="dashboard-modal-card">
+        <div class="dashboard-modal-head">
+          <h2 id="editProfileTitle">Edit Details</h2>
+          <button id="closeEditModal" class="dashboard-modal-close" type="button">×</button>
+        </div>
+
+        <form id="editProfileForm" class="dashboard-modal-form" novalidate>
+          <label class="dashboard-input">
+            <span>Date of Birth</span>
+            <input id="editDobInput" type="date" name="dob" />
+          </label>
+
+          <label class="dashboard-input">
+            <span>Business Name</span>
+            <input id="editBusinessNameInput" type="text" name="businessName" maxlength="80" placeholder="Your business name" />
+          </label>
+
+          <label class="dashboard-input">
+            <span>Business Type</span>
+            <input id="editBusinessTypeInput" type="text" name="businessType" maxlength="80" placeholder="Retail, Agency, Clinic..." />
+          </label>
+
+          <div class="dashboard-modal-actions">
+            <button class="dashboard-modal-save" type="submit">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="/topnav.js"></script>
+    <script src="/dashboard.js"></script>
+  </body>
+</html>

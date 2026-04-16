@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuickSend | Admin Ads</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="admin-body">
+    <main class="admin-page">
+      <section class="admin-panel">
+        <header class="admin-panel-head">
+          <div>
+            <p>Admin Controls</p>
+            <h1>Dashboard Advertisement</h1>
+          </div>
+          <a class="admin-back-link" href="/dashboard.html">User Dashboard</a>
+        </header>
+
+        <div class="admin-preview-card">
+          <img id="adminAdPreviewImage" class="admin-preview-image" alt="Ad preview" />
+          <div class="admin-preview-copy">
+            <strong id="adminAdPreviewText">No advertisement saved yet.</strong>
+            <a id="adminAdPreviewLink" href="#" target="_blank" rel="noreferrer">Preview Link</a>
+          </div>
+        </div>
+
+        <form id="adminAdForm" class="admin-form" novalidate>
+          <label class="admin-input">
+            <span>Ad Slot</span>
+            <select id="adminAdSlotInput" class="admin-select">
+              <option value="dashboard">Dashboard Ad</option>
+              <option value="wallet">Wallet Ad</option>
+              <option value="services">Select Services Ad</option>
+              <option value="sms">Message Sending Ad</option>
+            </select>
+          </label>
+          <label class="admin-input">
+            <span>Ad Text</span>
+            <input id="adminAdTextInput" type="text" maxlength="180" placeholder="Write ad message" />
+          </label>
+          <label class="admin-input">
+            <span>Ad Open Link</span>
+            <input id="adminAdLinkInput" type="url" placeholder="https://example.com" />
+          </label>
+          <label class="admin-input">
+            <span>Ad Image</span>
+            <input id="adminAdImageInput" type="file" accept=".png,.jpg,.jpeg,.webp" />
+          </label>
+          <div id="adminAdStatus" class="admin-status" aria-live="polite"></div>
+          <div class="admin-action-row">
+            <button class="admin-submit" type="submit">Save Advertisement</button>
+            <button id="removeAdButton" class="admin-remove-button" type="button">Remove Advertisement</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <script src="/admin-ads.js"></script>
+  </body>
+</html>

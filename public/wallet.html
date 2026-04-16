@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuickSend | Wallet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  </head>
+  <body class="wallet-body">
+    <main class="wallet-page">
+      <section class="wallet-shell">
+        <header class="wallet-head">
+          <div class="wallet-user">
+            <img id="walletAvatar" class="wallet-avatar" src="/quicksend-logo.svg" alt="Profile" />
+            <div>
+              <p>QuickSend Wallet</p>
+              <h1 id="walletName">User</h1>
+            </div>
+          </div>
+          <a class="wallet-back-link" href="/dashboard.html">Back</a>
+        </header>
+
+        <section class="wallet-balance-card">
+          <span>Current Balance</span>
+          <strong id="walletBalanceText">INR 0</strong>
+          <small id="walletLowBalanceHint"></small>
+        </section>
+
+        <section id="walletAdCard" class="wallet-ad-card is-hidden">
+          <img id="walletAdImage" class="wallet-ad-image" alt="Wallet ad" />
+          <div class="wallet-ad-copy">
+            <p id="walletAdText"></p>
+            <a id="walletAdLink" class="wallet-ad-link" href="#" target="_blank" rel="noreferrer">Open</a>
+          </div>
+        </section>
+
+        <section class="wallet-add-money">
+          <h2>Add Money</h2>
+          <div class="wallet-amount-grid">
+            <button class="wallet-amount-btn" type="button" data-amount="50">INR 50</button>
+            <button class="wallet-amount-btn" type="button" data-amount="100">INR 100</button>
+            <button class="wallet-amount-btn" type="button" data-amount="200">INR 200</button>
+            <button class="wallet-amount-btn" type="button" data-amount="500">INR 500</button>
+          </div>
+
+          <div class="wallet-custom-row">
+            <input id="walletCustomAmount" class="wallet-custom-input" type="number" min="1" step="1" placeholder="Custom amount" />
+            <button id="walletCustomPay" class="wallet-pay-btn" type="button">Pay</button>
+          </div>
+        </section>
+
+        <section class="wallet-transactions">
+          <div class="wallet-section-head">
+            <h2>My Transactions</h2>
+            <span>Last 20</span>
+          </div>
+          <div id="walletTransactionsList" class="wallet-transaction-list"></div>
+        </section>
+
+        <div id="walletStatus" class="wallet-status" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <script src="/topnav.js"></script>
+    <script src="/wallet.js"></script>
+  </body>
+</html>

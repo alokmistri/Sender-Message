@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuickSend | SMS Sending</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="sms-body">
+    <main class="sms-page">
+      <section class="sms-shell">
+        <header class="sms-head">
+          <div>
+            <p>QuickSend Campaign</p>
+            <h1>Message Sending</h1>
+          </div>
+          <a class="sms-back-link" href="/service-page.html">Back</a>
+        </header>
+
+        <section class="sms-layout">
+          <div class="sms-main">
+            <section class="sms-panel">
+              <div class="sms-panel-head">
+                <h2>Upload Numbers</h2>
+                <span>PDF / CSV</span>
+              </div>
+              <input id="smsFileInput" class="sms-file-input" type="file" accept=".pdf,.csv" />
+              <label class="sms-upload-button" for="smsFileInput">Upload PDF/CSV</label>
+              <div class="sms-stats">
+                <span id="smsTotalCount">Total: 0</span>
+                <span id="smsValidCount">Valid: 0</span>
+                <span id="smsInvalidCount">Invalid: 0</span>
+              </div>
+            </section>
+
+            <section class="sms-panel">
+              <div class="sms-panel-head">
+                <h2>Write Message</h2>
+                <select id="smsModeSelect" class="sms-mode-select">
+                  <option value="manual">Write Manually</option>
+                  <option value="ai">Write With AI</option>
+                </select>
+              </div>
+
+              <div id="smsManualSection">
+                <textarea id="smsMessageInput" class="sms-textarea" placeholder="Write your message here"></textarea>
+              </div>
+
+              <div id="smsAiSection" class="sms-ai-section is-hidden">
+                <input id="smsAiTopic" class="sms-text-input" type="text" placeholder="Topic" />
+                <input id="smsAiDate" class="sms-text-input" type="text" placeholder="Date" />
+                <input id="smsAiVenue" class="sms-text-input" type="text" placeholder="Venue" />
+                <textarea id="smsAiAdditionalInfo" class="sms-textarea sms-textarea-small" placeholder="Additional Info"></textarea>
+                <button id="smsGenerateAiButton" class="sms-secondary-button" type="button">Generate Message</button>
+              </div>
+            </section>
+
+            <section class="sms-panel">
+              <div class="sms-panel-head">
+                <h2>Upload Image</h2>
+                <span>JPG / PNG</span>
+              </div>
+              <input id="smsImageInput" class="sms-file-input" type="file" accept=".jpg,.jpeg,.png" />
+              <label class="sms-upload-button sms-upload-button-secondary" for="smsImageInput">Upload Image</label>
+              <p id="smsImageUrlText" class="sms-image-url-text">No image uploaded.</p>
+            </section>
+
+            <section id="smsInlineAdCard" class="sms-inline-ad-card is-hidden">
+              <img id="smsInlineAdImage" class="sms-inline-ad-image" alt="SMS ad" />
+              <div class="sms-inline-ad-copy">
+                <p id="smsInlineAdText"></p>
+                <a id="smsInlineAdLink" class="sms-inline-ad-link" href="#" target="_blank" rel="noreferrer">Open</a>
+              </div>
+            </section>
+          </div>
+
+          <aside class="sms-preview-panel">
+            <div class="sms-preview-head">
+              <h2>Final Preview</h2>
+              <span id="smsCostText">INR 0</span>
+            </div>
+            <div class="sms-cost-rules">Cost INR 1 below 50 messages. Cost INR 0.90 above 50 messages.</div>
+            <div id="smsPreviewNumbers" class="sms-preview-numbers">No valid numbers yet.</div>
+            <div id="smsPreviewMessage" class="sms-preview-message">Your message preview will appear here.</div>
+            <a id="smsPreviewImageLink" class="sms-preview-image-link is-hidden" href="#" target="_blank" rel="noreferrer">View uploaded image</a>
+            <button id="smsSendButton" class="sms-send-button" type="button">Send Message</button>
+          </aside>
+        </section>
+
+        <div id="smsStatus" class="sms-status" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <script src="/topnav.js"></script>
+    <script src="/sms-page.js"></script>
+  </body>
+</html>

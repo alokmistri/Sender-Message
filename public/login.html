@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuickSend | Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="login-body">
+    <main class="login-page">
+      <section class="login-card">
+        <div class="login-hero">
+          <div class="login-avatar" aria-hidden="true">
+            <span>Q</span>
+          </div>
+          <h1>Login</h1>
+        </div>
+
+        <form id="loginForm" class="login-form" novalidate>
+          <label class="login-input">
+            <input
+              id="loginContactInput"
+              name="contact"
+              type="text"
+              inputmode="numeric"
+              maxlength="10"
+              placeholder="Enter your number"
+              autocomplete="tel"
+              required
+            />
+          </label>
+
+          <label class="login-input">
+            <input
+              id="loginEmailInput"
+              name="email"
+              type="email"
+              placeholder="Enter your email"
+              autocomplete="email"
+              required
+            />
+          </label>
+
+          <label class="login-input">
+            <input
+              id="loginPasswordInput"
+              name="password"
+              type="password"
+              placeholder="Enter your password"
+              autocomplete="current-password"
+              required
+            />
+          </label>
+
+          <div class="login-meta">
+            <a class="login-link" href="/forgot-password.html">Forgot password?</a>
+          </div>
+
+          <div id="loginStatus" class="login-status" aria-live="polite"></div>
+
+          <button class="login-submit" type="submit">Log In</button>
+
+          <p class="login-note">Not registered yet? <a href="/signup.html">Sign Up</a></p>
+        </form>
+      </section>
+    </main>
+
+    <script src="/topnav.js"></script>
+    <script src="/login.js"></script>
+  </body>
+</html>
